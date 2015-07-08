@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "loader", "loader\loader_vc110.vcxproj", "{D3AD1501-E463-457C-A9BA-6DADDECB5D5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.loader", "1.loader", "{452E239F-5333-4DBF-8C30-2A846F435B35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.plugins", "2.plugins", "{3CCBAC66-CA6A-4D4F-B326-1B8DEAF69800}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mainframe", "plugins\mainframe_vc110.vcxproj", "{8472E301-AAB2-469A-AFBB-2C37AB475A18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.base", "0.base", "{99ED2880-BDB7-43BA-A8A0-8E38E6C2FFFB}"
+	ProjectSection(SolutionItems) = preProject
+		..\include\utility\utilitymacro.h = ..\include\utility\utilitymacro.h
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "paneplugin", "plugins\paneplugin_vc110.vcxproj", "{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "interface", "interface", "{48373E90-6120-4391-94FF-EAA0AC7BE415}"
+	ProjectSection(SolutionItems) = preProject
+		..\include\interface\ipaneplugin.h = ..\include\interface\ipaneplugin.h
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pluginconfig", "plugins\pluginconfig_vc110.vcxproj", "{E3E443A2-0A7B-476D-B633-58D84F2F6A32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3AD1501-E463-457C-A9BA-6DADDECB5D5B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D3AD1501-E463-457C-A9BA-6DADDECB5D5B}.Debug|Win32.Build.0 = Debug|Win32
+		{D3AD1501-E463-457C-A9BA-6DADDECB5D5B}.Debug|x64.ActiveCfg = Debug|Win32
+		{D3AD1501-E463-457C-A9BA-6DADDECB5D5B}.Release|Win32.ActiveCfg = Release|Win32
+		{D3AD1501-E463-457C-A9BA-6DADDECB5D5B}.Release|Win32.Build.0 = Release|Win32
+		{D3AD1501-E463-457C-A9BA-6DADDECB5D5B}.Release|x64.ActiveCfg = Release|Win32
+		{8472E301-AAB2-469A-AFBB-2C37AB475A18}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8472E301-AAB2-469A-AFBB-2C37AB475A18}.Debug|Win32.Build.0 = Debug|Win32
+		{8472E301-AAB2-469A-AFBB-2C37AB475A18}.Debug|x64.ActiveCfg = Debug|x64
+		{8472E301-AAB2-469A-AFBB-2C37AB475A18}.Debug|x64.Build.0 = Debug|x64
+		{8472E301-AAB2-469A-AFBB-2C37AB475A18}.Release|Win32.ActiveCfg = Release|Win32
+		{8472E301-AAB2-469A-AFBB-2C37AB475A18}.Release|Win32.Build.0 = Release|Win32
+		{8472E301-AAB2-469A-AFBB-2C37AB475A18}.Release|x64.ActiveCfg = Release|x64
+		{8472E301-AAB2-469A-AFBB-2C37AB475A18}.Release|x64.Build.0 = Release|x64
+		{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}.Debug|Win32.Build.0 = Debug|Win32
+		{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}.Debug|x64.ActiveCfg = Debug|x64
+		{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}.Debug|x64.Build.0 = Debug|x64
+		{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}.Release|Win32.ActiveCfg = Release|Win32
+		{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}.Release|Win32.Build.0 = Release|Win32
+		{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}.Release|x64.ActiveCfg = Release|x64
+		{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}.Release|x64.Build.0 = Release|x64
+		{E3E443A2-0A7B-476D-B633-58D84F2F6A32}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E3E443A2-0A7B-476D-B633-58D84F2F6A32}.Debug|Win32.Build.0 = Debug|Win32
+		{E3E443A2-0A7B-476D-B633-58D84F2F6A32}.Debug|x64.ActiveCfg = Debug|x64
+		{E3E443A2-0A7B-476D-B633-58D84F2F6A32}.Debug|x64.Build.0 = Debug|x64
+		{E3E443A2-0A7B-476D-B633-58D84F2F6A32}.Release|Win32.ActiveCfg = Release|Win32
+		{E3E443A2-0A7B-476D-B633-58D84F2F6A32}.Release|Win32.Build.0 = Release|Win32
+		{E3E443A2-0A7B-476D-B633-58D84F2F6A32}.Release|x64.ActiveCfg = Release|x64
+		{E3E443A2-0A7B-476D-B633-58D84F2F6A32}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D3AD1501-E463-457C-A9BA-6DADDECB5D5B} = {452E239F-5333-4DBF-8C30-2A846F435B35}
+		{8472E301-AAB2-469A-AFBB-2C37AB475A18} = {3CCBAC66-CA6A-4D4F-B326-1B8DEAF69800}
+		{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0} = {3CCBAC66-CA6A-4D4F-B326-1B8DEAF69800}
+		{E3E443A2-0A7B-476D-B633-58D84F2F6A32} = {3CCBAC66-CA6A-4D4F-B326-1B8DEAF69800}
+		{48373E90-6120-4391-94FF-EAA0AC7BE415} = {99ED2880-BDB7-43BA-A8A0-8E38E6C2FFFB}
+	EndGlobalSection
+EndGlobal

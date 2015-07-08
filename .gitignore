@@ -1,28 +1,40 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# build files
+/build/Debug/obj/
+*.ilk
+*.pdb
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# gitignore files
+.gitignore
 
-# Fortran module files
-*.mod
+# Makefile
+Makefile
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# vim swap files
+*~
 
-# Executables
-*.exe
-*.out
-*.app
+# XTP files
+/build/Debug/styles/*
+!/build/Debug/styles/README
+/build/Debug/Translations/*
+!/build/Debug/Translations/README
+/build/Debug/plugins/ToolkitPro1531vc100D.dll
+/lib/ToolkitPro1531vc110D.lib
+/include/XTP/*
+!/include/XTP/README
+
+# x3py files
+!/build/Debug/plugins/x3manager.pln
+
+# ms project files
+*.sdf
+*.user
+*.opensdf
+
+# Tool files
+/projects/msvc/
+/tools/
+/src/example/pltempl/
+/src/public/
+
+
