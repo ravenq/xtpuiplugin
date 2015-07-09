@@ -30,6 +30,7 @@ Makefile
 *.sdf
 *.user
 *.opensdf
+*.suo
 
 # Tool files
 /projects/msvc/
