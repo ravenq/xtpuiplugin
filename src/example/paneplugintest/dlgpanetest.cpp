@@ -1,11 +1,5 @@
-// DlgPane.cpp : 实现文件
-//
-
-//#include "stdafx.h"
-//#include "paneplugin.h"
-#include "DlgPane.h"
+#include "dlgpanetest.h"
 #include "afxdialogex.h"
-// CDlgPane 对话框
 
 IMPLEMENT_DYNAMIC(CDlgPane, CDialog)
 

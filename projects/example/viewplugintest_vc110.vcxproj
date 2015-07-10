@@ -18,34 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\src\plugins\mainframe\childfrm.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\mainframe.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\mainframedoc.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\mainframeview.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\mainframewnd.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\module.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\include\plugins\mainframe\imainframe.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\childfrm.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\mainframe.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\mainframedoc.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\mainframeview.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\mainframewnd.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\src\plugins\mainframe\app.ico" />
-    <Image Include="..\..\src\plugins\mainframe\doc.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="..\..\src\plugins\mainframe\app.rc" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>mainframe</ProjectName>
-    <ProjectGuid>{8472E301-AAB2-469A-AFBB-2C37AB475A18}</ProjectGuid>
-    <RootNamespace>mainframe</RootNamespace>
+    <ProjectName>viewplugintest</ProjectName>
+    <ProjectGuid>{0D03AACF-0F0D-46A4-995C-899091A11CCD}</ProjectGuid>
+    <RootNamespace>viewplugintest</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -130,7 +106,6 @@
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -139,7 +114,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\src\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\source\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WIN64;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -157,7 +132,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\..\src\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\source\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
@@ -181,7 +156,7 @@
       <TargetEnvironment>X64</TargetEnvironment>
     </Midl>
     <ClCompile>
-      <AdditionalIncludeDirectories>..\..\src\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\source\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WIN64;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
@@ -200,6 +175,18 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\example\viewplugintest\module.cpp" />
+    <ClCompile Include="..\..\src\example\viewplugintest\viewplugintest.cpp" />
+    <ClCompile Include="..\..\src\example\viewplugintest\viewplugintestdoc.cpp" />
+    <ClCompile Include="..\..\src\example\viewplugintest\viewplugintestview.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\example\viewplugintest\iviewplugintest.h" />
+    <ClInclude Include="..\..\src\example\viewplugintest\viewplugintest.h" />
+    <ClInclude Include="..\..\src\example\viewplugintest\viewplugintestdoc.h" />
+    <ClInclude Include="..\..\src\example\viewplugintest\viewplugintestview.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

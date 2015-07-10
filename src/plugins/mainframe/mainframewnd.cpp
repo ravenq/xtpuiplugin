@@ -87,7 +87,7 @@ BOOL CMainFrameWnd::InitRibbonTheme()
 
 	CString strStyle;
 	ENV_STYLE_DIR(strStyle);
-	strStyle.Append(_T("\\Office2010.dll"));
+	strStyle.Append(_T("\\Windows7.dll"));
 	XTPResourceImages()->SetHandle(strStyle);
 	XTPPaintManager()->SetTheme(xtpThemeRibbon);
 	pCommandBars->SetTheme(xtpThemeRibbon);
@@ -102,7 +102,8 @@ BOOL CMainFrameWnd::InitDockPane()
 	m_dockPaneMgr.InstallDockingPanes(this);
 	m_dockPaneMgr.SetTheme(xtpPaneThemeOffice2007);
 
-	CXTPDockingPane* pPane = m_dockPaneMgr.CreatePane(222, CRect(0, 0, 190, rect.Height() / 2), xtpPaneDockLeft); // load from plugin
+	// TODO: load from plugin
+	CXTPDockingPane* pPane = m_dockPaneMgr.CreatePane(222, CRect(0, 0, 190, rect.Height() / 2), xtpPaneDockLeft); 
 	pPane->SetOptions(xtpPaneNoFloatable | xtpPaneNoCloseable | xtpPaneNoDockable);
 
 	return TRUE;
@@ -123,8 +124,8 @@ int CMainFrameWnd::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 
 	m_wndClient.Attach(this, FALSE);
-	m_wndClient.GetToolTipContext()->SetStyle((XTPToolTipStyle)(xtpToolTipLuna + 1));
-	m_wndClient.SetFlags(xtpWorkspaceHideClose | xtpWorkspaceHideArrowsAlways);
+	//m_wndClient.GetToolTipContext()->SetStyle((XTPToolTipStyle)(xtpToolTipLuna + 1));
+	//m_wndClient.SetFlags(xtpWorkspaceHideClose | xtpWorkspaceHideArrowsAlways);
 
 	return 0;
 }

@@ -179,7 +179,7 @@
     <ClCompile Include="..\..\src\plugins\pluginconfig\pluginconfig.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\pluginconfig\ipluginconfig.h" />
+    <ClInclude Include="..\..\include\plugins\pluginconfig\ipluginconfig.h" />
     <ClInclude Include="..\..\src\plugins\pluginconfig\pluginconfig.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

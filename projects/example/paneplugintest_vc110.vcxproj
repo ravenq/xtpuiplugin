@@ -18,34 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\src\plugins\mainframe\childfrm.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\mainframe.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\mainframedoc.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\mainframeview.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\mainframewnd.cpp" />
-    <ClCompile Include="..\..\src\plugins\mainframe\module.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\include\plugins\mainframe\imainframe.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\childfrm.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\mainframe.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\mainframedoc.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\mainframeview.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\mainframewnd.h" />
-    <ClInclude Include="..\..\src\plugins\mainframe\resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\src\plugins\mainframe\app.ico" />
-    <Image Include="..\..\src\plugins\mainframe\doc.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="..\..\src\plugins\mainframe\app.rc" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>mainframe</ProjectName>
-    <ProjectGuid>{8472E301-AAB2-469A-AFBB-2C37AB475A18}</ProjectGuid>
-    <RootNamespace>mainframe</RootNamespace>
+    <ProjectName>paneplugintest</ProjectName>
+    <ProjectGuid>{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}</ProjectGuid>
+    <RootNamespace>paneplugin</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -130,7 +106,6 @@
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -200,6 +175,20 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\example\paneplugintest\ipaneplugintest.h" />
+    <ClInclude Include="..\..\src\example\paneplugintest\dlgpanetest.h" />
+    <ClInclude Include="..\..\src\example\paneplugintest\paneplugintest.h" />
+    <ClInclude Include="..\..\src\example\paneplugintest\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\example\paneplugintest\paneplugintest.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\example\paneplugintest\dlgpanetest.cpp" />
+    <ClCompile Include="..\..\src\example\paneplugintest\module.cpp" />
+    <ClCompile Include="..\..\src\example\paneplugintest\paneplugintest.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

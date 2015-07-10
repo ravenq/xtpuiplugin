@@ -3,7 +3,6 @@
 *.ilk
 *.pdb
 
-
 # gitignore files
 .gitignore
 
@@ -31,11 +30,5 @@ Makefile
 *.user
 *.opensdf
 *.suo
-
-# Tool files
-/projects/msvc/
-/tools/
-/src/example/pltempl/
-/src/public/
 
 

@@ -26,7 +26,13 @@ CUimainApp theApp;
 
 void CUimainApp::LoadCorePlugins()
 {
-	const char* plugins[] = { "x3manager.pln", "mainframe.pln", "paneplugin.pln", NULL };
+	const char* plugins[] = { 
+		"x3manager.pln", 
+		"mainframe.pln", 
+		"paneplugintest.pln",
+		"viewplugintest.pln",
+		NULL };
+
 	x3::loadPlugins(plugins, "plugins");
 	x3::loadScanPlugins("plugins");
 }
@@ -45,7 +51,7 @@ BOOL CUimainApp::InitInstance()
 
 	AfxEnableControlContainer();
 	EnableTaskbarInteraction(FALSE);
-	SetRegistryKey(_T("www.zoesoft.com"));
+	SetRegistryKey(_T("www.aquariushome.duapp.com"));
 	LoadStdProfileSettings(4);
 
 	// ¼ÓÔØ²å¼þ

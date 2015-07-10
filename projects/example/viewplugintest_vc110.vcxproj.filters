@@ -15,18 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\plugins\pluginconfig\module.cpp">
+    <ClCompile Include="..\..\src\example\viewplugintest\module.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\plugins\pluginconfig\pluginconfig.cpp">
+    <ClCompile Include="..\..\src\example\viewplugintest\viewplugintest.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\example\viewplugintest\viewplugintestdoc.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\example\viewplugintest\viewplugintestview.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\plugins\pluginconfig\ipluginconfig.h">
+    <ClInclude Include="..\..\src\example\viewplugintest\viewplugintest.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\example\viewplugintest\iviewplugintest.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\plugins\pluginconfig\pluginconfig.h">
+    <ClInclude Include="..\..\src\example\viewplugintest\viewplugintestdoc.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\example\viewplugintest\viewplugintestview.h">
       <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>

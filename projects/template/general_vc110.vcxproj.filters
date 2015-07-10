@@ -15,19 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\plugins\pluginconfig\module.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\plugins\pluginconfig\pluginconfig.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\include\plugins\pluginconfig\ipluginconfig.h">
+    <ClInclude Include="..\..\include\{{pkg_name}}\{{project_name_lower}}\i{{project_name_lower}}.h">
       <Filter>interface</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\plugins\pluginconfig\pluginconfig.h">
+    <ClInclude Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}.h">
       <Filter>source</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\module.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

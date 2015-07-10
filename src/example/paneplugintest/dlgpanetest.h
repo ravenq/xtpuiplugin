@@ -1,7 +1,6 @@
 #pragma once
 #include "resource.h"
 #include <afxwin.h>
-// CDlgPane ¶Ô»°¿ò
 
 class CDlgPane : public CDialog
 {

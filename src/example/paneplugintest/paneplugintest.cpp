@@ -1,6 +1,6 @@
 //#include "stdafx.h"
 #include <module/plugininc.h>
-#include "paneplugin.h"
+#include "paneplugintest.h"
 #include <utility/utilitymacro.h>
 
 CPanePluginTest::CPanePluginTest()

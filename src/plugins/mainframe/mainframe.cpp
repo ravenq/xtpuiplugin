@@ -1,11 +1,12 @@
 #include <module/plugininc.h>
-#include "mainframe.h"
+#include <utility/utilitymacro.h>
 #include <string>
 #include "resource.h"
-#include <utility/utilitymacro.h>
-#include "mainframedoc.h"
+#include "mainframe.h"
 #include "childfrm.h"
+#include "mainframedoc.h"
 #include "mainframeview.h"
+#include <interface/iviewlugin.h>
 
 CMainFrame::CMainFrame()
 {
@@ -15,6 +16,28 @@ CMainFrame::CMainFrame()
 CMainFrame::~CMainFrame()
 {
 	
+}
+
+void CMainFrame::RegisterTemplates()
+{
+// 	CMultiDocTemplate* pTemplate = new CMultiDocTemplate(
+// 		IDR_MAINFRAME,
+// 		RUNTIME_CLASS(CMainframeDoc),
+// 		RUNTIME_CLASS(CChildFrame),
+// 		RUNTIME_CLASS(CMainframeView));
+// 	AfxGetApp()->AddDocTemplate(pTemplate);
+
+	// TODO: load from config
+	 x3::Object<IViewPlugin> viewPluginPtr;
+	 if(!viewPluginPtr.create(_T("e2f969c0-2600-11e5-a15a-0021ccd9da8f")))
+		 return;
+
+	 CMultiDocTemplate* pTemplate = new CMultiDocTemplate(
+		 IDR_MAINFRAME,
+		 viewPluginPtr->GetDocRC(),
+		 RUNTIME_CLASS(CChildFrame),
+		 viewPluginPtr->GetViewRC());
+	 AfxGetApp()->AddDocTemplate(pTemplate);
 }
 
 BOOL CMainFrame::CreateFrame(LPCWSTR factoryFile)
@@ -34,12 +57,7 @@ BOOL CMainFrame::CreateFrame(LPCWSTR factoryFile)
 		TRACE1("Warning: no translation file '%s'\n", strFile);
 
 	// register template
-	CMultiDocTemplate* pTemplate = new CMultiDocTemplate(
-		IDR_MAINFRAME,
-		RUNTIME_CLASS(CMainframeDoc),
-		RUNTIME_CLASS(CChildFrame),
-		RUNTIME_CLASS(CMainframeView));
-	AfxGetApp()->AddDocTemplate(pTemplate);
+	RegisterTemplates();
 
 	m_pMainFrameWnd = new CMainFrameWnd();
 	 

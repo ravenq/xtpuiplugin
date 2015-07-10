@@ -3,8 +3,8 @@
 
 #include <module/classmacro.h>
 #include <interface/ipaneplugin.h>
-#include <example/ipaneplugintest.h>
-#include "DlgPane.h"
+#include <example/paneplugintest/ipaneplugintest.h>
+#include "dlgpanetest.h"
 
 class CPanePluginTest : public IPanePluginTest, public IPanePlugin
 {

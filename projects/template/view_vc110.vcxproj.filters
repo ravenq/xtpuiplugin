@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{517625E8-3653-47B2-8F30-C4B355E1120B}</UniqueIdentifier>
+      <Extensions>i</Extensions>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\{{pkg_name}}\{{project_name_lower}}\i{{project_name_lower}}.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}doc.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}view.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\module.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}doc.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}view.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

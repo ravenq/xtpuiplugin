@@ -2,7 +2,7 @@
 #define X3_EXAMPLE_SIMPLE_IMPL_H
 
 #include <module/classmacro.h>
-#include <pluginconfig/ipluginconfig.h>
+#include <plugins/pluginconfig/ipluginconfig.h>
 
 class CPluginConfig : public IPluginConfig
 {

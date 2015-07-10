@@ -2,7 +2,7 @@
 #define __MAINFRAME_IMPL_H__
 
 #include <module/classmacro.h>
-#include <mainframe/imainframe.h>
+#include <plugins/mainframe/imainframe.h>
 #include "mainframewnd.h"
 
 class CMainFrame : public IMainFrame
@@ -13,6 +13,8 @@ class CMainFrame : public IMainFrame
 protected:
     CMainFrame();
     virtual ~CMainFrame();
+
+	void RegisterTemplates();
 
 	CMainFrameWnd* m_pMainFrameWnd;
 

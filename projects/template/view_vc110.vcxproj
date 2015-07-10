@@ -18,10 +18,22 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\{{pkg_name}}\{{project_name_lower}}\i{{project_name_lower}}.h" />
+    <ClInclude Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}.h" />
+    <ClInclude Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}doc.h" />
+    <ClInclude Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}view.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\module.cpp" />
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}.cpp" />
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}doc.cpp" />
+    <ClCompile Include="..\..\src\{{pkg_name}}\{{project_name_lower}}\{{project_name_lower}}view.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>paneplugin</ProjectName>
-    <ProjectGuid>{64AC3EFC-473D-4EFD-B9BD-749EE01CE6A0}</ProjectGuid>
-    <RootNamespace>paneplugin</RootNamespace>
+    <ProjectName>{{project_name_lower}}</ProjectName>
+    <ProjectGuid>{{{uuid}}}</ProjectGuid>
+    <RootNamespace></RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -114,7 +126,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\src\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\source\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WIN64;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -132,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\..\src\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\source\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
@@ -156,7 +168,7 @@
       <TargetEnvironment>X64</TargetEnvironment>
     </Midl>
     <ClCompile>
-      <AdditionalIncludeDirectories>..\..\src\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\source\public;..\..\interface\core;..\..\interface\example;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WIN64;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
@@ -175,20 +187,6 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\src\example\paneplugin\DlgPane.cpp" />
-    <ClCompile Include="..\..\src\example\paneplugin\module.cpp" />
-    <ClCompile Include="..\..\src\example\paneplugin\paneplugin.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\include\example\ipaneplugintest.h" />
-    <ClInclude Include="..\..\src\example\paneplugin\DlgPane.h" />
-    <ClInclude Include="..\..\src\example\paneplugin\paneplugin.h" />
-    <ClInclude Include="..\..\src\example\paneplugin\resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="..\..\src\example\paneplugin\paneplugin.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
