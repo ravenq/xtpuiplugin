@@ -8,6 +8,7 @@
 #include "afxwinappex.h"
 #include "afxdialogex.h"
 #include "app.h"
+#include "mainframe.h"
 
 BEGIN_MESSAGE_MAP(CUimainApp, CWinApp)
 	ON_COMMAND(ID_FILE_NEW, CWinApp::OnFileNew)
@@ -19,7 +20,7 @@ CUimainApp::CUimainApp()
 	// 支持重新启动管理器
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
 
-	SetAppID(_T("loader.AppID.NoVersion"));
+	SetAppID(_T("loader.AppID.1.0"));
 }
 
 CUimainApp theApp;
@@ -57,22 +58,15 @@ BOOL CUimainApp::InitInstance()
 	// 加载插件
 	LoadCorePlugins();
 
-	// 创建框架插件
-	if (!m_mainFramePtr.create(clsidMainFrame))
-		return FALSE;
-
-	if(!m_mainFramePtr->CreateFrame(L""))
-		return FALSE;
-
-	m_mainFramePtr->ShowWindow();
+	// 主框架
+	CMainFrame frame;
+	frame.CreateFrame();
+	frame.ShowWindow();
 	return TRUE;
 }
 
 int CUimainApp::ExitInstance()
 {
-	if (m_mainFramePtr)
-		m_mainFramePtr.release();
-
 	x3::unloadScanPlugins();
 	x3::unloadPlugins();
 

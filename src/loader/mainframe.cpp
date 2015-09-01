@@ -1,11 +1,12 @@
-#include <module/plugininc.h>
-#include <utility/utilitymacro.h>
+#include "stdafx.h"
 #include <string>
 #include "resource.h"
 #include "mainframe.h"
 #include "childfrm.h"
 #include "mainframedoc.h"
 #include "mainframeview.h"
+#include "utility\utilitymacro.h"
+
 #include <interface/iviewlugin.h>
 
 CMainFrame::CMainFrame()
@@ -20,37 +21,35 @@ CMainFrame::~CMainFrame()
 
 void CMainFrame::RegisterTemplates()
 {
-// 	CMultiDocTemplate* pTemplate = new CMultiDocTemplate(
-// 		IDR_MAINFRAME,
-// 		RUNTIME_CLASS(CMainframeDoc),
-// 		RUNTIME_CLASS(CChildFrame),
-// 		RUNTIME_CLASS(CMainframeView));
-// 	AfxGetApp()->AddDocTemplate(pTemplate);
+	//CMultiDocTemplate* pTemplate = new CMultiDocTemplate(
+	//	IDR_MAINFRAME,
+	//	RUNTIME_CLASS(CMainframeDoc),
+	//	RUNTIME_CLASS(CChildFrame),
+	//	RUNTIME_CLASS(CMainframeView));
+	//AfxGetApp()->AddDocTemplate(pTemplate);
 
 	// TODO: load from config
-	 x3::Object<IViewPlugin> viewPluginPtr;
-	 if(!viewPluginPtr.create(_T("e2f969c0-2600-11e5-a15a-0021ccd9da8f")))
+	x3::Object<IViewPlugin> viewPluginPtr;
+	if(!viewPluginPtr.create(_T("e2f969c0-2600-11e5-a15a-0021ccd9da8f")))
 		 return;
-
-	 CMultiDocTemplate* pTemplate = new CMultiDocTemplate(
+	
+	CMultiDocTemplate* pTemplate = new CMultiDocTemplate(
 		 IDR_MAINFRAME,
 		 viewPluginPtr->GetDocRC(),
 		 RUNTIME_CLASS(CChildFrame),
 		 viewPluginPtr->GetViewRC());
-	 AfxGetApp()->AddDocTemplate(pTemplate);
+	AfxGetApp()->AddDocTemplate(pTemplate);
 }
 
-BOOL CMainFrame::CreateFrame(LPCWSTR factoryFile)
+BOOL CMainFrame::CreateFrame()
 {
 	if (m_pMainFrameWnd != NULL)
 		return TRUE;
 
-	SWITCH_RESOURCE_HANDLE
-
 	CXTPWinDwmWrapper().SetProcessDPIAware();
 
 	CString strFile;
-	ENV_RESOURCE_PATH(strFile)
+	ENV_RESOURCE_PATH(strFile);
 	if (PathFileExists(strFile))
 		XTPResourceManager()->SetResourceFile(strFile);
 	else
@@ -71,9 +70,6 @@ BOOL CMainFrame::CreateFrame(LPCWSTR factoryFile)
 
 void CMainFrame::ShowWindow()
 {
-	SWITCH_RESOURCE_HANDLE
-	//AFX_MANAGE_STATE(AfxGetStaticModuleState());
-
 	CCommandLineInfo cmdInfo;
 	AfxGetApp()->ParseCommandLine(cmdInfo);
 

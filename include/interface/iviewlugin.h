@@ -1,6 +1,7 @@
 #ifndef __I_PANE_PLUGIN_H__
 #define __I_PANE_PLUGIN_H__
 
+#include <module/plugininc.h>
 #include <objptr.h>
 #include <afxwin.h>
 

@@ -3,7 +3,6 @@
 //
 #pragma once
 #include <objptr.h>
-#include <plugins/mainframe/imainframe.h>
 
 #ifndef __AFXWIN_H__
 	#error "在包含此文件之前包含“stdafx.h”以生成 PCH 文件"
@@ -15,8 +14,6 @@ public:
 	CUimainApp();
 
 private:
-	 x3::Object<IMainFrame> m_mainFramePtr;
-
 	 void LoadCorePlugins();
 
 public:

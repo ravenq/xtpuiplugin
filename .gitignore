@@ -13,11 +13,11 @@ Makefile
 *~
 
 # XTP files
-/build/Debug/styles/*
-!/build/Debug/styles/README
+/src/loader/Styles/*
+!/src/loader/Styles/README
 /build/Debug/Translations/*
 !/build/Debug/Translations/README
-/build/Debug/plugins/ToolkitPro1531vc100D.dll
+/build/Debug/ToolkitPro1531vc100D.dll
 /lib/ToolkitPro1531vc110D.lib
 /include/XTP/*
 !/include/XTP/README

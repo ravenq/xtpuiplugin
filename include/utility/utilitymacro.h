@@ -48,5 +48,10 @@ public:
 	PathAppend(szName, _T("styles")); \
 	x = szName;
 
+#define  ENV_LAYOUT_FILE(x) \
+	__PRO_DIR \
+	PathAppend(szName, _T("layout.xml")); \
+	x = szName;
+
 
 #endif //!__UTILITY_MACRO_H__

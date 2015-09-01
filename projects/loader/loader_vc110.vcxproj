@@ -12,12 +12,34 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\loader\app.cpp" />
+    <ClCompile Include="..\..\src\loader\childfrm.cpp" />
+    <ClCompile Include="..\..\src\loader\cntritem.cpp" />
+    <ClCompile Include="..\..\src\loader\mainframe.cpp" />
+    <ClCompile Include="..\..\src\loader\mainframedoc.cpp" />
+    <ClCompile Include="..\..\src\loader\mainframeview.cpp" />
+    <ClCompile Include="..\..\src\loader\mainframewnd.cpp" />
     <ClCompile Include="..\..\src\loader\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\loader\app.h" />
+    <ClInclude Include="..\..\src\loader\childfrm.h" />
+    <ClInclude Include="..\..\src\loader\cntritem.h" />
+    <ClInclude Include="..\..\src\loader\mainframe.h" />
+    <ClInclude Include="..\..\src\loader\mainframedoc.h" />
+    <ClInclude Include="..\..\src\loader\mainframeview.h" />
+    <ClInclude Include="..\..\src\loader\mainframewnd.h" />
+    <ClInclude Include="..\..\src\loader\resource.h" />
     <ClInclude Include="..\..\src\loader\stdafx.h" />
     <ClInclude Include="..\..\src\loader\targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\loader\mainframe.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\src\loader\res\mainframe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\loader\res\mainframe.rc2" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D3AD1501-E463-457C-A9BA-6DADDECB5D5B}</ProjectGuid>
@@ -59,12 +81,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../../include;../../include/x3py;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include;../../include/x3py;../../include/XTP;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+      <AdditionalLibraryDirectories>../../lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
