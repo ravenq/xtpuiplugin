@@ -17,13 +17,11 @@ IMPLEMENT_SERIAL(CManiframeCntrItem, CRichEditCntrItem, 0)
 CManiframeCntrItem::CManiframeCntrItem(REOBJECT* preo, CMainframeDoc* pContainer)
 	: CRichEditCntrItem(preo, pContainer)
 {
-	// TODO: add one-time construction code here
 	
 }
 
 CManiframeCntrItem::~CManiframeCntrItem()
 {
-	// TODO: add cleanup code here
 	
 }
 

@@ -298,13 +298,11 @@ void CMainFrameWnd::OnUpdateRibbonTab(CCmdUI* pCmdUI)
 
 void CMainFrameWnd::OnViewFullscreen() 
 {
-	// TODO: Add your command handler code here
 	
 }
 
 void CMainFrameWnd::OnViewNormal() 
 {
-	// TODO: Add your command handler code here
 	
 }
 

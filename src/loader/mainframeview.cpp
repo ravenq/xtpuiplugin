@@ -35,7 +35,6 @@ END_MESSAGE_MAP()
 
 CMainframeView::CMainframeView()
 {
-	// TODO: add construction code here
 
 }
 
@@ -45,8 +44,6 @@ CMainframeView::~CMainframeView()
 
 BOOL CMainframeView::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: Modify the Window class or styles here by modifying
-	//  the CREATESTRUCT cs
 
 	return CRichEditView::PreCreateWindow(cs);
 }

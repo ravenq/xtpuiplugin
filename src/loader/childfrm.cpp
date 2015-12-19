@@ -28,7 +28,6 @@ END_MESSAGE_MAP()
 
 CChildFrame::CChildFrame()
 {
-	// TODO: add member initialization code here
 	
 }
 
@@ -38,8 +37,6 @@ CChildFrame::~CChildFrame()
 
 BOOL CChildFrame::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: Modify the Window class or styles here by modifying
-	//  the CREATESTRUCT cs
 
 	if( !CMDIChildWnd::PreCreateWindow(cs) )
 		return FALSE;

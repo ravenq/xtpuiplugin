@@ -34,7 +34,6 @@ END_MESSAGE_MAP()
 
 CMainframeDoc::CMainframeDoc()
 {
-	// TODO: add one-time construction code here
 
 }
 
@@ -46,9 +45,6 @@ BOOL CMainframeDoc::OnNewDocument()
 {
 	if (!CRichEditDoc::OnNewDocument())
 		return FALSE;
-
-	// TODO: add reinitialization code here
-	// (SDI documents will reuse this document)
 
 	return TRUE;
 }
@@ -68,16 +64,11 @@ void CMainframeDoc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
-		// TODO: add storing code here
 	}
 	else
 	{
-		// TODO: add loading code here
 	}
 
-	// Calling the base class CRichEditDoc enables serialization
-	//  of the container document's COleClientItem objects.
-	// TODO: set CRichEditDoc::m_bRTF = FALSE if you are serializing as text
 	CRichEditDoc::Serialize(ar);
 }
 
